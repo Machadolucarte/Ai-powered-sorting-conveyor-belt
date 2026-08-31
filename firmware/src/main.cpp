@@ -1,5 +1,5 @@
-#include <Arduino.h>
 #include <Servo.h> // 1. Inclui a biblioteca do Servo
+#include <Arduino.h>
 
 Servo meuServo;    // 2. Cria o objeto para controlar o servo
 

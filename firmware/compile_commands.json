@@ -150,10 +150,75 @@
         "output": ".pio/build/uno/FrameworkArduino/wiring_shift.c.o"
     },
     {
-        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard src/main.cpp",
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/avr/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/avr/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/avr/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/avr/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/esp32/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/esp32/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/esp32/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/esp32/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/mbed/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/mbed/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/mbed/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/mbed/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/megaavr/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/megaavr/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/megaavr/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/megaavr/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/nrf52/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/nrf52/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/nrf52/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/nrf52/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/renesas/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/renesas/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/renesas/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/renesas/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/sam/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/sam/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/sam/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/sam/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/samd/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/samd/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/samd/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/samd/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/stm32f4/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/stm32f4/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/stm32f4/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/stm32f4/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/xmc/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/xmc/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/xmc/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/xmc/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libe6f/Servo/zephyr/Servo.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/Servo/src/zephyr/Servo.cpp",
+        "directory": "/home/lucas/projeto_esteira/firmware",
+        "file": ".pio/libdeps/uno/Servo/src/zephyr/Servo.cpp",
+        "output": ".pio/build/uno/libe6f/Servo/zephyr/Servo.cpp.o"
+    },
+    {
+        "command": "/home/lucas/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I.pio/libdeps/uno/Servo/src -I/home/lucas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/lucas/.platformio/packages/framework-arduino-avr/variants/standard src/main.cpp",
         "directory": "/home/lucas/projeto_esteira/firmware",
         "file": "src/main.cpp",
         "output": ".pio/build/uno/src/main.cpp.o"
     }
 ]
-
