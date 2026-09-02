@@ -1,0 +1,31 @@
+description: Ultralytics best model trained on /content/Recycling-&-Trash-4/data.yaml
+author: Ultralytics
+date: '2026-09-01T23:46:04.900025+00:00'
+version: 8.4.138
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+head: Detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: can
+  1: cardboard
+  2: glass
+  3: paper
+  4: plastic
+  5: plastic bag
+  6: plastic bottle
+args:
+  data: null
+  batch: 1
+  fraction: 1.0
+  quantize: null
+  keras: false
+  opset: null
+  nms: false
+channels: 3
+end2end: false
