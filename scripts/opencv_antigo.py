@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 import cv2
-from pyfirmata2 import Arduino
+from pyfirmata2 import Arduino # type: ignore
 import time
 import threading
 import subprocess
@@ -35,31 +35,55 @@ IP_TELEFONE = obter_ip_telefone()
 print(f"📱 IP do telefone detectado: {IP_TELEFONE}")
 
 url = f"http://{IP_TELEFONE}:8080/video"
+
+# ==========================================
+# ESCOLHA SUA CÂMERA AQUI:
+# Para usar o celular: CAMERA_SOURCE = url
+# Para usar a webcam nativa no WSL: CAMERA_SOURCE = 0 (ou "/dev/video0")
+# ==========================================
 CAMERA_SOURCE = url
 
 class CameraStream:
     def __init__(self, src):
-        self.cap = cv2.VideoCapture(src)
+        is_url = isinstance(src, str) and ("http" in src or "rtsp" in src)
+        
+        if is_url:
+            print("🌐 Iniciando câmera via REDE (Celular)...")
+            self.cap = cv2.VideoCapture(src)
+            # FIX: Limita o buffer para 1 frame na rede para acabar com o delay/atraso
+            self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+        else:
+            print("💻 Iniciando câmera via USB (Webcam/WSL)...")
+            self.cap = cv2.VideoCapture(src)
+            # FIX: Configuração anti-Segmentation Fault para o WSL
+            self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+            self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+            self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+            self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+            
         if not self.cap.isOpened():
             print(f"❌ Erro: Não foi possível abrir a câmera '{src}'.")
             
-        self.ret, self.frame = self.cap.read()
+        self.ret = False
+        self.frame = None
         self.stopped = False
         
-        threading.Thread(target=self.update, daemon=True).start()
+        if self.cap.isOpened():
+            self.ret, self.frame = self.cap.read()
+            threading.Thread(target=self.update, daemon=True).start()
 
     def update(self):
         while not self.stopped:
             if self.cap.isOpened():
+                # FIX: Removido o time.sleep() para ler o vídeo na velocidade máxima sem acumular quadros antigos
                 self.ret, self.frame = self.cap.read()
-            time.sleep(0.01)
 
     def read(self):
         return self.ret, self.frame
 
     def release(self):
         self.stopped = True
-        if self.cap.isOpened():
+        if hasattr(self, 'cap') and self.cap.isOpened():
             self.cap.release()
 
 # ==========================================
@@ -107,7 +131,9 @@ time.sleep(2)
 print("🚀 Sistema de Monitoramento de Estado Iniciado.")
 print("💡 DICA: Pressione 'q' na janela do vídeo ou Ctrl+C no terminal para sair.")
 
+# Janela criada preventivamente para evitar o erro (-27:Null pointer)
 NOME_JANELA = "Monitoramento de Estado Continuo"
+cv2.namedWindow(NOME_JANELA)
 
 try:
     while True:
