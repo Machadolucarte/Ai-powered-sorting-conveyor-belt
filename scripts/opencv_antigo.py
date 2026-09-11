@@ -45,7 +45,7 @@ url: str = f"http://{IP_TELEFONE}:8080/video"
 # Para usar a webcam nativa no WSL: CAMERA_SOURCE = 0 (ou "/dev/video0")
 # ==========================================
 # Usando '|' no lugar de Union (Padrão Python 3.10+)
-CAMERA_SOURCE: str | int = "/dev/video0"
+CAMERA_SOURCE: str | int = url
 
 class CameraStream:
     def __init__(self, src: str | int) -> None:
@@ -84,6 +84,7 @@ class CameraStream:
         while not self.stopped:
             if self.cap.isOpened():
                 self.ret, self.frame = self.cap.read()
+            time.sleep(0.01)
 
     def read(self) -> tuple[bool, np.ndarray | None]:
         return self.ret, self.frame
