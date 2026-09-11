@@ -8,7 +8,7 @@ ROOT=~/projects/projeto_esteira/
 tmux new-session -d -s $SESSION -n python -c $ROOT
 
 # Divide a janela (o painel da direita é criado e recebe o foco automaticamente)
-tmux split-window -h -p 25 -t $SESSION:python -c $ROOT
+tmux split-window -h -p 24 -t $SESSION:python -c $ROOT
 
 # Envia o comando do venv para o painel da direita
 tmux send-keys -t $SESSION:python "source $ROOT/.venv/bin/activate; clear" C-m
@@ -24,7 +24,7 @@ tmux send-keys -t $SESSION:python 'nvim .' C-m
 tmux new-window -t $SESSION -n cpp -c $ROOT/firmware
 
 # Divide a janela (foco vai para a direita)
-tmux split-window -h -p 25 -t $SESSION:cpp -c $ROOT/firmware
+tmux split-window -h -p 24 -t $SESSION:cpp -c $ROOT/firmware
 
 # Envia o monitor serial para o painel da direita
 # tmux send-keys -t $SESSION:cpp 'pio device monitor' C-m
@@ -41,7 +41,7 @@ tmux send-keys -t $SESSION:cpp 'nvim .' C-m
 tmux new-window -t $SESSION -n ros2 -c $ROOT/ros2_ws
 
 # Divide a janela (foco vai para a direita)
-tmux split-window -h -p 25 -t $SESSION:ros2 -c $ROOT/ros2_ws
+tmux split-window -h -p 24 -t $SESSION:ros2 -c $ROOT/ros2_ws
 
 # Carrega o ambiente ROS2 no painel da direita
 tmux send-keys -t $SESSION:ros2 'source /opt/ros/humble/setup.bash; clear' C-m
